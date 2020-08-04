@@ -8,6 +8,21 @@
   </div>
 </template>
 
+<script>
+import axios from "axios";
+
+
+export default {
+    mounted() {
+    
+    axios.get("https://covid-19-data.p.rapidapi.com/report/totals?date-format=YYYY-MM-DD&format=json&date=2020-07-21")
+    .then(res => {
+      console.log(res);
+    })
+  }
+}
+</script>>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
